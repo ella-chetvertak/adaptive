@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.header-inner {
+	height: 249px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+	position: relative;
+}
+
+.burger-icon {
+	display: none;
+}
+
+.nav-list {
+	display: flex;
+}
+
+.nav-item-link {
+	font-size: 20px;
+	text-decoration: none;
+	color: #000000;
+	margin-right: 67px;
+}
+
+.nav-item:last-of-type .nav-item-link {
+	margin-right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+	#container {
+		max-width: 920px;
+	}
+
+	.header-inner {
+		max-height: 122px;
+		margin: 0 auto;
+	}
+
+	.header-logo {
+		position: absolute;
+		left: 50%;
+		top: 37px;
+		margin-left: -50px;
+	}
+
+	.nav {
+		display: none;
+	}
+
+		/* burger */
+
+	.burger-icon {
+		width: 48px;
+		height: 31px;
+		border: none;
+		cursor: pointer;
+		background: none;
+		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		top: 45px;
+		right: 0;
+	}
+
+	.burger-icon::before, .burger-icon::after, .burger-icon-inner {
+		content: '';
+		display: block;
+		width: 48px;
+		background: #000;
+		height: 5px;
+	}
+
+	/* menu open */
+
+	.menu-open {
+		background: #000;
+		position: absolute;
+		width: 100%;
+		min-height: 316px;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+
+	.menu-open .header-inner {
+		background-color: #000;
+		margin: 0 auto;
+		align-items: stretch;
+		justify-content: flex-start;
+		width: 920px;
+	}
+
+	.menu-open .header-logo svg path {
+		fill: #fff;
+	}
+
+	.menu-open .burger-icon::before, .menu-open .burger-icon::after {
+		position: absolute;
+		background:#fff;
+		transition: ease 1s;
+	}
+
+	.menu-open .burger-icon::before {
+		transform: rotate(45deg);
+		top: 15px;
+	}
+
+	.menu-open .burger-icon-inner {
+		content: none;
+	}
+
+	.menu-open .burger-icon::after {
+		transform: rotate(-45deg);
+		bottom: 10px;
+	}
+
+	.menu-open .nav {
+		display: block;
+		margin: 0 auto;
+		margin-top: 176px;
+	}
+	
+	.menu-open .nav-item-link {
+		color: #fff;
+	}
+
+	.menu-open + .carousel {
+		margin-top: 122px;
+	}
+}
