@@ -40,6 +40,7 @@ ul {
 	text-decoration: none;
 	color: #000000;
 	margin-right: 67px;
+	font-weight: 400;
 }
 
 .nav-item:last-of-type .nav-item-link {
@@ -388,9 +389,56 @@ ul {
 	.box-wrapper {
 		height: 58px;
 		padding: 16px 0;
+		width: 335px;
+		margin: 0 auto;
+		margin-bottom: 24px;
 	}
 	
 	.box-inner-text {
 		font-size: 20px;
+	}
+
+	.dark-boxes-wrapper {
+		margin-bottom: 26px;
+	}
+
+	.dark-box-wrapper {
+		width: 335px;
+		margin: 0 auto;
+	}
+
+	.dark-box-text {
+		width: 295px;
+		font-weight: 400;
+		display: flex;
+		flex-direction: column;
+		font-weight: 300;
+	}
+
+	.counter {
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	/* form-elements */
+
+	.box-second {
+		margin-bottom: 32px;
+	}
+
+	.form-elements {
+		width: 335px;
+		margin: 0 auto;
+	}
+
+	.textarea {
+		padding: 20px 20px;
+		text-align: center;
+		margin-bottom: 19px;
+	}
+
+	.submit {
+		position: static;
+		width: 100%;
 	}
 }

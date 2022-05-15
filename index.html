@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
@@ -30,9 +30,9 @@
                     </a>
                     <nav class="nav">
                         <ul class="nav-list">
-                            <li class="nav-item"><a href="#" class="nav-item-link">gallery</a></li>
-                            <li class="nav-item"><a href="#" class="nav-item-link">history</a></li>
-                            <li class="nav-item"><a href="#" class="nav-item-link">contact us</a></li>
+                            <li class="nav-item"><h2><a href="#" class="nav-item-link">gallery</a></h2></li>
+                            <li class="nav-item"><h2><a href="#" class="nav-item-link">history</a></h2></li>
+                            <li class="nav-item"><h2><a href="#" class="nav-item-link">contact us</a></h2></li>
                         </ul>
                     </nav>
                 </div>
@@ -49,10 +49,10 @@
                 </div>
             </div>
             <p class="text-wrapper">Suspendisse potenti. Curabitur in leo non odio hendrerit semper. Morbi id tempor eros. Donec viverra tempor congue. Suspendisse quis felis ultricies, egestas tellus non, semper est.Donec congue lorem odio, eu ornare nisl malesuada tincidunt. Nullam ac leo est. Donec varius neque vel ex consectetur aliquet. Aliquam venenatis vel tellus non tincidunt. In viverra tellus ut libero dapibus ullamcorper. Donec non feugiat massa.</p>
-            <div class="box-wrapper"><h2 class="box-inner-text">history</h2></div>
+            <div class="box-wrapper"><h3 class="box-inner-text">history</h3></div>
             <div class="dark-boxes-wrapper">
                 <div class="dark-box-wrapper">
-                    <p class="dark-box-text"><span class="counter">1890</span>Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.</p>
+                    <p class="dark-box-text"><span class="counter">1891</span>Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.</p>
                 </div>
                 <div class="dark-box-wrapper">
                     <p class="dark-box-text"><span class="counter">1920</span>Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio. Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris neque nisi, pharetra ac posuere nec, vehicula non lorem.</p>
@@ -64,15 +64,21 @@
                 <button type="submit" class="submit"><a href="#" class="submit-inner-link">send</a></button>
             </form>
         </div>
-        <script src="js/scripts.js"></script>
         <script src="js/jquery-3.6.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
         <script src="js/slick.min.js"></script>
+        <script src="js/scripts.js"></script>
         <script>
-            $(document).ready(function(){
+            $(window).on('load', function(){
                 $('.carousel').slick({
                     initialSlide: 2,
                     dots: false,
                     arrows:false
+                });
+
+                $('.counter').counterUp({
+                    time: 2000
                 });
             });
         </script>
